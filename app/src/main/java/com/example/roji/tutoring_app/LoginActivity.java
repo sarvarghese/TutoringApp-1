@@ -21,7 +21,7 @@ import java.util.Map;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button bLogin, bRegister;
-    RadioButton rbStudent, rbTutor, rbBusiness, rbUser;
+    RadioButton rbStudent, rbTutor, rbBusiness;
     EditText etEmail, etPassword;
 
 
@@ -37,7 +37,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         rbTutor = (RadioButton) findViewById(R.id.rbTutor);
         rbBusiness = (RadioButton) findViewById(R.id.rbBusiness);
 
-        //rbUser = (RadioButton) findViewById(R.id.rbUser);
 
         bLogin = (Button) findViewById(R.id.bLogin);
         bRegister = (Button) findViewById(R.id.bRegister);
@@ -73,8 +72,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                             Intent studentI = new Intent(LoginActivity.this, StudentActivity.class);
                             LoginActivity.this.startActivity(studentI);
-
-                            //finish();
+                            finish();
                         }
                         @Override
                         public void onAuthenticationError(FirebaseError firebaseError) {
@@ -94,7 +92,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                             Intent TutorIntent = new Intent(LoginActivity.this, TutorActivity.class);
                             LoginActivity.this.startActivity(TutorIntent);
-                            //finish();
+                            finish();
                         }
                         @Override
                         public void onAuthenticationError(FirebaseError firebaseError) {
@@ -113,7 +111,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                         Intent BusinessIntent = new Intent(LoginActivity.this, BusinessActivity.class);
                         LoginActivity.this.startActivity(BusinessIntent);
-                        //finish();
+                        finish();
                     }
 
                     @Override

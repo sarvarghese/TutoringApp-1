@@ -62,6 +62,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             Toast.makeText(getApplicationContext(), "Registration Successful", Toast.LENGTH_SHORT).show();
                             Intent StudentIntent = new Intent(RegisterActivity.this, StudentActivity.class);
                             RegisterActivity.this.startActivity(StudentIntent);
+                            finish();
                         }
 
                         @Override
@@ -79,6 +80,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             Toast.makeText(getApplicationContext(), "Registration Successful", Toast.LENGTH_SHORT).show();
                             Intent TutorIntent = new Intent(RegisterActivity.this, TutorActivity.class);
                             RegisterActivity.this.startActivity(TutorIntent);
+                            finish();
                         }
 
                         @Override
@@ -95,6 +97,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             Toast.makeText(getApplicationContext(), "Registration Successful", Toast.LENGTH_SHORT).show();
                             Intent BusinessIntent = new Intent(RegisterActivity.this, BusinessActivity.class);
                             RegisterActivity.this.startActivity(BusinessIntent);
+                            finish();
                         }
 
                         @Override
