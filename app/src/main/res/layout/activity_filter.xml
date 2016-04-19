@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.roji.tutoring_app.filterActivity"
+    android:onClick="onCreateTutorList">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/subjectHeader"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:text="Select the Subject"
+        android:gravity="center" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Math"
+        android:id="@+id/mathChoice"
+        android:layout_below="@+id/subjectHeader"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:onClick="onCheckboxClicked"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Science"
+        android:id="@+id/scienceChoice"
+        android:layout_below="@+id/mathChoice"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:onClick="onCheckboxClicked"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="English"
+        android:id="@+id/englishChoice"
+        android:layout_below="@+id/scienceChoice"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:onClick="onCheckboxClicked"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Business"
+        android:id="@+id/businessChoice"
+        android:layout_below="@+id/englishChoice"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:onClick="onCheckboxClicked"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer Science"
+        android:id="@+id/csChoice"
+        android:layout_below="@+id/businessChoice"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:onClick="onCheckboxClicked"/>
+
+    <RadioGroup android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_alignEnd="@+id/editText">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 mil."
+            android:id="@+id/mile10"
+            android:checked="false"
+            android:layout_below="@+id/editText"
+            android:layout_alignEnd="@+id/editText"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15 mil."
+            android:id="@+id/mile15"
+            android:checked="false"
+            android:layout_above="@+id/englishChoice"
+            android:layout_alignStart="@+id/radioButton" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25 mil."
+            android:id="@+id/mile25"
+            android:checked="false"
+            android:layout_below="@+id/radioButton2"
+            android:layout_alignStart="@+id/radioButton2" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50 mil."
+            android:id="@+id/mile50"
+            android:checked="false"
+            android:layout_below="@+id/radioButton3"
+            android:layout_alignStart="@+id/radioButton3" />
+    </RadioGroup>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Database"
+        android:id="@+id/searchFilter"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="toTutorCat"
+        android:nestedScrollingEnabled="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_alignTop="@+id/subjectHeader"
+        android:layout_alignParentEnd="true"
+        android:text="Range" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="History"
+        android:id="@+id/historyChoice"
+        android:layout_below="@+id/csChoice"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:onClick="onCheckboxClicked"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music"
+        android:id="@+id/musicChoice"
+        android:layout_below="@+id/historyChoice"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:onClick="onCheckboxClicked"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/otherText"
+        android:layout_alignParentStart="true"
+        android:text="Other:"
+        android:layout_alignEnd="@+id/mathChoice"
+        android:layout_below="@+id/musicChoice" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Maps"
+        android:id="@+id/mapButton"
+        android:layout_above="@+id/searchFilter"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:onClick="toMap" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchQuery"
+        android:layout_below="@+id/otherText"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Filters"
+        android:id="@+id/setFilterButton"
+        android:layout_alignTop="@+id/musicChoice"
+        android:layout_alignEnd="@+id/searchQuery"
+        android:onClick="otherString" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/name.listview"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:inputType="none"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/subject.listview"
+        android:layout_below="@+id/name.listview"
+        android:layout_alignParentStart="true"
+        android:inputType="none"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/email.listview"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:elegantTextHeight="false"
+        />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar.listview"
+        android:layout_below="@+id/email.listview"
+        android:layout_alignParentStart="true"
+        android:stepSize=".5"
+        android:isIndicator="true"/>
+
+</RelativeLayout>
