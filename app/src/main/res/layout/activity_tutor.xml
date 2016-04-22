@@ -1,13 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Tutor"
-        android:id="@+id/tvTutorMsg"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/Name"
+        android:hint="Name" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/Email"
+        android:text="Email: JSmith@gmail.com"
+        android:hint="Email" />
+
+    <EditText
+        android:layout_width="386dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/Subject"
+        android:layout_weight="0.11"
+        android:text="Subject(s): MATH"
+        android:hint="Subject" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/Location"
+        android:layout_weight="0.09"
+        android:text="Location: 6895 Fair View Dr. Arlington, TX 76003"
+        android:hint="Loation" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/Details"
+        android:layout_weight="0.17"
+        android:text="Details: Graduated from UT Austin with Bachelor&apos;s degree in Mathematics"
+        android:hint="Details" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:text="save"
+        android:id="@+id/saveInfo"
+        android:layout_weight="0.11"
         android:layout_gravity="center_horizontal" />
+
 </LinearLayout>
