@@ -7,10 +7,15 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class tutorCategoryList extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class tutorCategoryList extends AppCompatActivity{
 
 
     ListView lv;
+    int distance;
+    ArrayList listOfSubjects= new ArrayList<String>();
+    MapsActivity mMap= new MapsActivity();
     String names[]={"Saul","Jibin","Sarah","Shervin","Jacob","Lisa","Wendy","David","John","Kevin","Rick"};
     String addresses[]={"802 South Mills Drive, Euless, Texas 76040",
             "1505 Woodvine Drive, Euless, Texas 76040 ",
@@ -42,6 +47,10 @@ public class tutorCategoryList extends AppCompatActivity {
     }*/
     public void onCreate(Bundle savedInstance)
     {
+        Bundle n = getIntent().getBundleExtra("n1");
+        distance=n.getInt("distance");
+        listOfSubjects=n.getStringArrayList("subjects");
+
         super.onCreate(savedInstance);
         setContentView(R.layout.activity_tutor_category_list);
         lv=(ListView)findViewById(R.id.listView1);

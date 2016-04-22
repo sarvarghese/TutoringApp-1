@@ -91,7 +91,8 @@
             android:id="@+id/mile15"
             android:checked="false"
             android:layout_above="@+id/englishChoice"
-            android:layout_alignStart="@+id/radioButton" />
+            android:layout_alignStart="@+id/radioButton"
+            android:onClick="onRadioButtonClicked" />
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -100,7 +101,8 @@
             android:id="@+id/mile25"
             android:checked="false"
             android:layout_below="@+id/radioButton2"
-            android:layout_alignStart="@+id/radioButton2" />
+            android:layout_alignStart="@+id/radioButton2"
+            android:onClick="onRadioButtonClicked" />
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -109,7 +111,8 @@
             android:id="@+id/mile50"
             android:checked="false"
             android:layout_below="@+id/radioButton3"
-            android:layout_alignStart="@+id/radioButton3" />
+            android:layout_alignStart="@+id/radioButton3"
+            android:onClick="onRadioButtonClicked" />
     </RadioGroup>
 
 
