@@ -72,3 +72,8 @@ public class tutorCategoryList extends AppCompatActivity{
         * */
     }
 }
+/*
+* You are going to need to edit the listviewobject to include arraylist then convert it into arays and then pass them to the
+* adapter class in this class when you set up the adapter
+*
+* */
