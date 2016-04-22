@@ -8,9 +8,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name: Kevin Baker"
         android:ems="10"
-        android:id="@+id/Name" />
+        android:id="@+id/Name"
+        android:hint="Name" />
 
     <EditText
         android:layout_width="match_parent"
@@ -18,14 +18,26 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/Email"
-        android:text="Email: JSmith@gmail.com" />
+        android:text="Email: JSmith@gmail.com"
+        android:hint="Email" />
 
     <EditText
         android:layout_width="386dp"
         android:layout_height="wrap_content"
         android:id="@+id/Subject"
         android:layout_weight="0.11"
-        android:text="Subject(s): MATH" />
+        android:text="Subject(s): MATH"
+        android:hint="Subject" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/Location"
+        android:layout_weight="0.09"
+        android:text="Location: 6895 Fair View Dr. Arlington, TX 76003"
+        android:hint="Loation" />
 
     <EditText
         android:layout_width="match_parent"
@@ -33,24 +45,16 @@
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/Details"
-        android:layout_weight="0.09"
-        android:text="Location: 6895 Fair View Dr. Arlington, TX 76003" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/editText2"
         android:layout_weight="0.17"
-        android:text="Details: Graduated from UT Austin with Bachelor&apos;s degree in Mathematics" />
+        android:text="Details: Graduated from UT Austin with Bachelor&apos;s degree in Mathematics"
+        android:hint="Details" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="89dp"
         android:layout_height="wrap_content"
         android:text="save"
-        android:id="@+id/addInfo"
+        android:id="@+id/saveInfo"
         android:layout_weight="0.11"
         android:layout_gravity="center_horizontal" />
 

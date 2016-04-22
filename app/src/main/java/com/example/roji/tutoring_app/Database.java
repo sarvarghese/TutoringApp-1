@@ -124,6 +124,15 @@ public class Database {
             });
         }
 
+    public void putTutor(User usr,NewTutorActivity tut)
+    {
+        database.child(userpath).child(usr.getEmail()).child(tut.get_Name()).setValue(tut, new Firebase.CompletionListener() {
+            @Override
+            public void onComplete(FirebaseError firebaseError, Firebase firebase) {
+                System.out.println("PUT TUTOR IN DATABASE");
+            }
+        });
+    }
 
 
 
