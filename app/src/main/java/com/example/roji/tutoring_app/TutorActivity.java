@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.firebase.client.Firebase;
 
 
-public class TutorActivity extends AppCompatActivity implements View.OnClickListener {
+public class TutorActivity extends AppCompatActivity {
 
     //MyDBHandler dbHandler;
     TextView mytext;
@@ -21,13 +21,13 @@ public class TutorActivity extends AppCompatActivity implements View.OnClickList
     EditText name;
     User usr;
 
-    private static Firebase database;
+    //private static Firebase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutor);
-
+/*
         name = (EditText) findViewById(R.id.Name);
         bSave = (Button) findViewById(R.id.saveInfo);
 
@@ -37,9 +37,10 @@ public class TutorActivity extends AppCompatActivity implements View.OnClickList
 
         Intent intent = getIntent();
         usr = (User)intent.getExtras().getSerializable("user");
+        */
 
     }
-
+/*
     @Override
     public void onClick(View v) {
         NewTutorActivity tutor = new NewTutorActivity();
@@ -49,6 +50,6 @@ public class TutorActivity extends AppCompatActivity implements View.OnClickList
         database.putTutor(usr, tutor);
         Toast.makeText(TutorActivity.this,"Tutor Added", Toast.LENGTH_SHORT).show();
 
-
     }
+    */
 }
