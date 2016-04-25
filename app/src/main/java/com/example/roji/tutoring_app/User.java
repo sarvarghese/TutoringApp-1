@@ -7,9 +7,10 @@ import java.io.Serializable;
 /**
  * Created by Sarah on 4/9/16.
  */
-public class User {
+public class User implements Serializable{
     private String email;
     private String password;
+    private String username;
 
     public User() {
     }
@@ -40,5 +41,13 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }
